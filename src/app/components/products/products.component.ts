@@ -15,7 +15,7 @@ searchProduct:string='No product is search';
 newsearchProduct:string='No product is search';
 ngOnInit(): void {
     setTimeout(()=>{
-this.isDisable=false;
+this.isDisable=false; 
     },3000)
 }
 updateCartStatus(){
