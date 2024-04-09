@@ -1,4 +1,24 @@
 <app-product></app-product>
-<app-product></app-product>
-<app-product></app-product>
-<button class="btn btn-primary m-4" [disabled]="isDisable">Add Product</button>
+<div class="form-group">
+    <h3 class="bg-secondary p-2 mt-2">Event Binding</h3>
+    <label for=" search product " class="text-warning bg-primary p-2 m-2 ">serarch product</label>
+    <input type="text " class="form-control " (keyup)="onProductSearch($event) ">
+</div>
+<p class="alert alert-info ">
+    {{searchProduct}}
+</p>
+<div class="form-group ">
+    <h3 class="bg-secondary p-2">Two way Binding</h3>
+    <label for="search new product " class="text-warning bg-danger p-2 m-2 ">serarch new product</label>
+    <input type="text " class="form-control " [(ngModel)]="newsearchProduct ">
+</div>
+<div class="alert alert-info ">
+    {{newsearchProduct}}
+</div>
+<h3 class="bg-secondary p-2">Task</h3>
+<button class="btn btn-primary m-4 " [disabled]="isDisable " (click)="updateCartStatus() ">Add Product</button>
+<button class="btn btn-primary m-4 " [disabled]="noofProductsAdded===0 " (click)="removeCartStatus() ">
+    Remove product</button>
+<p class="alert alert-info m-2 ">
+    {{cartProductStatus}}
+</p>
