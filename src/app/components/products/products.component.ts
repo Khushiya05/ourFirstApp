@@ -9,6 +9,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class  productsComponent implements OnInit{
 isDisable:boolean=true;
+isBoxVisible=true;
 cartProductStatus:string=`  No product is added to the cart.`;
 noofProductsAdded:number=0;
 searchProduct:string='No product is search';
@@ -36,5 +37,8 @@ onProductSearch(eve:Event){
     let val=(eve.target as HTMLInputElement).value;
     // console.log(val)
     this.searchProduct=val;
+}
+hideShowBox(){
+    this.isBoxVisible=!this.isBoxVisible;
 }
 }
